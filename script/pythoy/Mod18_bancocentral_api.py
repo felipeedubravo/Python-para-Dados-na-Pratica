@@ -1,6 +1,40 @@
+"""
+MÓDULO 18: Python e Coleta de Dados
+EBAC - Escola Britânica de Artes Criativas e Tecnologia
 
+API do Banco Central do Brasil: Dados Abertos do Pix
+Dataset: https://dadosabertos.bcb.gov.br/dataset/pix
+Recursos: Transações Pix por Município e Estimativas da População
 
+OBJETIVO:
+Coletar estatísticas mensais de transações Pix por município, utilizando a 
+API pública do Banco Central do Brasil, e salvar os dados em um arquivo CSV 
+para uso em análises posteriores.
 
+ETAPAS DO PIPELINE:
+1. REQUISIÇÃO: Acessa a API Pix_DadosAbertos (Olinda).
+2. EXTRAÇÃO: Obtém os dados no formato JSON.
+3. ESTRUTURAÇÃO: Converte os dados em um DataFrame do Pandas.
+4. EXPORTAÇÃO: Salva o resultado em um arquivo CSV.
+
+O DATASET CONTEMPLA:
+- Transações Pix Liquidadas no SPI.
+- Movimentações de Pessoa Física (PF) e Pessoa Jurídica (PJ).
+- Perspectiva do Pagador e do Recebedor.
+- Informações segmentadas por município, UF e região.
+
+COMO USAR:
+1. Instale as dependências executando no terminal:
+   pip install requests pandas
+
+2. Execute o script:
+   python Mod18_bancocentral_api.py
+
+3. O arquivo CSV será salvo na pasta de dados brutos do projeto.
+
+AUTOR: Felipe França
+DATA: 02/07/2026
+"""
 
 from pathlib import Path # Manipula cazinius de arquivus e diretorius de forma arientada a sujetos e independente di sisteme sperrasional.
 import requests # Realiza requisições HTTP para consumir APIs e acessar recursos da web de forma simples.
